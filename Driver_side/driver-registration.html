@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver Registration | TransQuick</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="css/driver.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="register__container">
+      <h2>Driver Registration</h2>
+      <form id="driverForm">
+        <!-- Step 1 -->
+        <div class="form-step active" id="step-1">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <input type="tel" placeholder="Phone Number" required />
+          <input type="text" placeholder="ID Number" required />
+          <div class="button-row">
+            <button type="button" onclick="nextStep()">Next</button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="form-step" id="step-2">
+          <select required>
+            <option value="" disabled selected>Select Service Type</option>
+            <option value="transport">Transport</option>
+            <option value="sand">Sand Delivery</option>
+            <option value="exhauster">Exhauster</option>
+            <option value="water">Water Delivery</option>
+            <option value="dumptruck">Dump Truck</option>
+            <option value="excavator">Excavator</option>
+            <option value="breakdown">Breakdown</option>
+          </select>
+          <input type="text" placeholder="Vehicle Plate Number" required />
+          <input type="text" placeholder="Vehicle Capacity (e.g. 5 tons)" required />
+          <select required>
+            <option value="" disabled selected>Select Fuel Type</option>
+            <option value="diesel">Diesel</option>
+            <option value="petrol">Petrol</option>
+          </select>
+          <div class="button-row">
+            <button type="button" onclick="prevStep()">Back</button>
+            <button type="button" onclick="nextStep()">Next</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="form-step" id="step-3">
+          <label>Upload Driver Photo</label>
+          <input type="file" accept="image/*" required />
+
+          <label>Upload ID Front</label>
+          <input type="file" accept="image/*" required />
+
+          <label>Upload ID Back</label>
+          <input type="file" accept="image/*" required />
+
+          <label>Upload Vehicle Photo</label>
+          <input type="file" accept="image/*" required />
+
+          <label>Upload Inspection Certificate</label>
+          <input type="file" accept="application/pdf,image/*" required />
+
+          <div class="button-row">
+            <button type="button" onclick="prevStep()">Back</button>
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let currentStep = 1;
+
+      function nextStep() {
+        document.getElementById(`step-${currentStep}`).classList.remove("active");
+        currentStep++;
+        document.getElementById(`step-${currentStep}`).classList.add("active");
+      }
+
+      function prevStep() {
+        document.getElementById(`step-${currentStep}`).classList.remove("active");
+        currentStep--;
+        document.getElementById(`step-${currentStep}`).classList.add("active");
+      }
+    </script>
+    <script src="js/driver_script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | TransQuick</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    
+    <!-- Mobile Header Toggle -->
+    <div class="mobile-header">
+      <button id="toggleSidebar"><i class="fas fa-bars"></i></button>
+    </div>
+
+    <div class="dashboard-wrapper">
+      <div class="dashboard">
+        <aside class="sidebar">
+          <div class="logo">TransQuick Admin</div>
+          <nav class="menu">
+            <a href="#" class="active" data-section="overview"><i class="fas fa-chart-line"></i> Overview</a>
+            <a href="#" data-section="users"><i class="fas fa-users"></i> Customers</a>
+            <a href="#" data-section="drivers"><i class="fas fa-truck"></i> Drivers</a>
+            <a href="#" data-section="requests"><i class="fas fa-tasks"></i> Requests</a>
+            <a href="#" data-section="transactions"><i class="fas fa-money-check-alt"></i> Transactions</a>
+            <a href="#" data-section="reports"><i class="fas fa-file-alt"></i> Reports</a>
+            <a href="#" data-section="settings"><i class="fas fa-cog"></i> Settings</a>
+          </nav>
+          <a href="admin-login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </aside>
+
+        <main class="main-content">
+          <!-- Overview -->
+          <section id="overview" class="section active">
+            <h2>Dashboard Overview</h2>
+            <div class="cards">
+              <div class="card">Total Users: <strong>104</strong></div>
+              <div class="card">Total Drivers: <strong>32</strong></div>
+              <div class="card">Requests Today: <strong>18</strong></div>
+              <div class="card">Revenue Today: <strong>Ksh 7,400</strong></div>
+            </div>
+          </section>
+
+          <!-- Users -->
+          <section id="users" class="section">
+            <h2>All Customers</h2>
+            <ul>
+              <li>James Otieno - james@gmail.com</li>
+              <li>Sarah Wanjiku - sarahw@yahoo.com</li>
+            </ul>
+          </section>
+
+          <!-- Drivers -->
+          <section id="drivers" class="section">
+            <h2>Registered Drivers</h2>
+            <ul>
+              <li>Peter Kamau - Transport - KCH 234L</li>
+              <li>Joseph Maina - Water Delivery - KAY 012C</li>
+            </ul>
+          </section>
+
+          <!-- Requests -->
+          <section id="requests" class="section">
+            <h2>Service Requests</h2>
+            <ul>
+              <li>Water Delivery to Gikambura - Pending</li>
+              <li>Sand Transport to Kitengela - Completed</li>
+            </ul>
+          </section>
+
+          <!-- Transactions -->
+          <section id="transactions" class="section">
+            <h2>Recent Transactions</h2>
+            <ul>
+              <li>Ksh 800 - Transport - Customer: Otieno</li>
+              <li>Ksh 1,200 - Sand - Customer: Mugo</li>
+            </ul>
+          </section>
+
+          <!-- Reports -->
+          <section id="reports" class="section">
+            <h2>Reports</h2>
+            <p>Coming soon: Downloadable PDF reports, analytics, logs, etc.</p>
+          </section>
+
+          <!-- Settings -->
+          <section id="settings" class="section">
+            <h2>Admin Settings</h2>
+            <p>Change password, notification preferences, etc.</p>
+          </section>
+        </main>
+      </div>
+    </div>
+        <script>
+      const links = document.querySelectorAll(".menu a");
+      const sections = document.querySelectorAll(".section");
+
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          links.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active");
+
+          sections.forEach((section) => section.classList.remove("active"));
+          const target = link.getAttribute("data-section");
+          document.getElementById(target).classList.add("active");
+        });
+      });
+    </script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

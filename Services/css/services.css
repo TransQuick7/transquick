@@ -1,0 +1,78 @@
+
+        .request-page-container {
+            max-width: 800px;
+            margin: 8rem auto 5rem auto; 
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .request-page-container h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .request-form {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: 1fr; 
+        }
+
+        @media (min-width: 600px) {
+            .request-form {
+                grid-template-columns: 1fr 1fr; 
+            }
+            .request-form textarea,
+            .request-form .full-width {
+                grid-column: span 2; 
+            }
+        }
+
+        .request-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .request-form input[type="text"],
+        .request-form input[type="datetime-local"],
+        .request-form select,
+        .request-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 0.5rem;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            box-sizing: border-box; 
+        }
+
+        .request-form input:focus,
+        .request-form select:focus,
+        .request-form textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .request-form button {
+            grid-column: span 2; 
+            width: auto; 
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            justify-self: center; 
+        }
+
+        .request-form button:hover {
+            background-color: var(--secondary);
+        }

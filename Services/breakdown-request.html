@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TransQuick - Breakdown Assistance</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../assets/images/transquick-logo.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="./css/services.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav__container section__container">
+            <div class="logo">TransQuick</div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line" id="menu-icon"></i>
+            </div>
+            <nav class="nav__menu" id="nav-menu">
+                <ul class="nav__links">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="client-login.html" class="btn">Customer Login</a>
+                    <a href="../Driver_side/driver-login.html" class="btn">Driver Login</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="request-page-container">
+        <h1>Request Breakdown Assistance</h1>
+        <form class="request-form">
+            <div class="form-group">
+                <label for="vehicleType">Vehicle Type:</label>
+                <select id="vehicleType" name="vehicleType" required>
+                    <option value="">Select Vehicle Type</option>
+                    <option value="Car">Car</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Van/Minibus">Van/Minibus</option>
+                    <option value="Lorry/Truck">Lorry/Truck</option>
+                    <option value="Motorbike">Motorbike</option>
+                    <option value="Other">Other (Specify in notes)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="problemDescription">Brief Problem Description:</label>
+                <input type="text" id="problemDescription" name="problemDescription" placeholder="e.g., Flat tire, Engine overheating, Battery dead" required />
+            </div>
+
+            <div class="form-group">
+                <label for="currentLocation">Your Current Location:</label>
+                <input type="text" id="currentLocation" name="currentLocation" placeholder="e.g., Thika Road near XYZ mall, or Use GPS if available" required />
+            </div>
+
+            <div class="form-group">
+                <label for="urgency">Urgency:</label>
+                <select id="urgency" name="urgency" required>
+                    <option value="">Select Urgency</option>
+                    <option value="High">High (Immediate assistance needed)</option>
+                    <option value="Medium">Medium (Within an hour or two)</option>
+                    <option value="Low">Low (Can wait a few hours)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" placeholder="+254 7XX XXX XXX" required />
+                <small>The service provider will call you on this number.</small>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="additionalNotes">Additional Details (optional):</label>
+                <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Any specific vehicle details (make, model, license plate), exact location details, or other info..."></textarea>
+            </div>
+
+            <button type="submit">Submit Breakdown Request</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__logo">TransQuick</div>
+            <p class="footer__text">
+                Reliable logistics at your fingertips. From transport to water
+                delivery, we're here for your everyday needs.
+            </p>
+            <div class="footer__links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Support</a>
+            </div>
+            <p class="footer__copyright">
+                &copy; 2025 TransQuick. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

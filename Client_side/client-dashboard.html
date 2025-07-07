@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Dashboard | TransQuick</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="css/customer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-header">
+      <button id="toggleSidebar"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="dashboard-wrapper">
+      <div class="dashboard">
+        <aside class="sidebar ">
+          <div class="logo">TransQuick</div>
+          <nav class="menu">
+            <a href="#" class="active" data-section="home"
+              ><i class="fas fa-home"></i> Home</a
+            >
+            <a href="#" data-section="request"
+              ><i class="fas fa-plus-circle"></i> Request Ride</a
+            >
+            <a href="#" data-section="requests"
+              ><i class="fas fa-list"></i> My Requests</a
+            >
+            <a href="#" data-section="settings"
+              ><i class="fas fa-cog"></i> Settings</a
+            >
+            <a href="#" data-section="profile"
+              ><i class="fas fa-user"></i> My Profile</a
+            >
+          </nav>
+          <a href="../index.html" class="logout"
+            ><i class="fas fa-sign-out-alt"></i> Logout</a
+          >
+        </aside>
+
+        <main class="main-content">
+          <!-- Home Section -->
+          <section id="home" class="section active">
+            <h2>Welcome Back</h2>
+            <div class="cards">
+              <div class="card">Total Requests: <strong>12</strong></div>
+              <div class="card">Completed: <strong>10</strong></div>
+              <div class="card">Pending: <strong>2</strong></div>
+            </div>
+            <div class="chart-placeholder">
+              [Chart Area – To be integrated later]
+            </div>
+          </section>
+
+          <!-- Request Ride Section -->
+          <section id="request" class="section">
+            <h2>Request a Ride</h2>
+            <form class="request-form">
+              <select required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="transport">Transport</option>
+                <option value="sand">Sand Delivery</option>
+                <option value="water">Water Delivery</option>
+                <option value="exhauster">Exhauster</option>
+                <option value="dumptruck">Dump Truck</option>
+                <option value="excavator">Excavator</option>
+                <option value="breakdown">Breakdown</option>
+              </select>
+              <input type="text" placeholder="Location" required />
+              <input type="datetime-local" required />
+              <input type="text" placeholder="Load size" />
+               <input type="text" placeholder="Number of hours" />
+              <textarea placeholder="Additional Notes (optional)"></textarea>
+              <button type="submit">Submit Request</button>
+            </form>
+          </section>
+
+          <!-- My Requests Section -->
+          <section id="requests" class="section">
+            <h2>My Requests</h2>
+            <p>You have 12 requests. 10 completed, 2 pending.</p>
+            <ul>
+              <li>🛻 Transport to Westlands – Completed</li>
+              <li>💧 Water Delivery to Rongai – Pending</li>
+              <li>🚚 Dump Truck to Gikambura – Completed</li>
+            </ul>
+          </section>
+
+          <!-- Settings Section -->
+          <section id="settings" class="section">
+            <h2>Settings</h2>
+            <p>Change password, notification preferences, etc. (Coming soon)</p>
+          </section>
+
+          <!-- Profile Section -->
+          <section id="profile" class="section">
+            <h2>My Profile</h2>
+            <p>
+              Name: John Doe<br />Email: johndoe@example.com<br />Phone: +254
+              712 345678
+            </p>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      const links = document.querySelectorAll(".menu a");
+      const sections = document.querySelectorAll(".section");
+
+      links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          links.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active");
+
+          sections.forEach((section) => section.classList.remove("active"));
+          const target = link.getAttribute("data-section");
+          document.getElementById(target).classList.add("active");
+        });
+      });
+    </script>
+    <script src="js/customer.js"></script>
+  </body>
+</html>

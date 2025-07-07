@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TransQuick - Excavator Request</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../assets/images/transquick-logo.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="./css/services.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav__container section__container">
+            <div class="logo">TransQuick</div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line" id="menu-icon"></i>
+            </div>
+            <nav class="nav__menu" id="nav-menu">
+                <ul class="nav__links">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="client-login.html" class="btn">Customer Login</a>
+                    <a href="../Driver_side/driver-login.html" class="btn">Driver Login</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="request-page-container">
+        <h1>Request Excavator Service</h1>
+        <form class="request-form">
+            <div class="form-group">
+                <label for="jobLocation">Job Location:</label>
+                <input type="text" id="jobLocation" name="jobLocation" placeholder="Enter site address or landmark" required />
+            </div>
+
+            <div class="form-group">
+                <label for="dateTime">Preferred Date & Time:</label>
+                <input type="datetime-local" id="dateTime" name="dateTime" required />
+            </div>
+
+            <div class="form-group">
+                <label for="workType">Type of Work:</label>
+                <select id="workType" name="workType" required>
+                    <option value="">Select Work Type</option>
+                    <option value="Digging">Digging / Trenching</option>
+                    <option value="Site Clearance">Site Clearance</option>
+                    <option value="Loading">Loading Material</option>
+                    <option value="Demolition">Light Demolition</option>
+                    <option value="Land Grading">Land Grading</option>
+                    <option value="Other">Other (Specify in notes)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="duration">Estimated Duration:</label>
+                <select id="duration" name="duration" required>
+                    <option value="">Select Duration</option>
+                    <option value="4-hours">Half Day (Approx. 4 hours)</option>
+                    <option value="8-hours">Full Day (Approx. 8 hours)</option>
+                    <option value="multi-day">Multiple Days (Specify in notes)</option>
+                    <option value="hourly">Hourly (Specify in notes)</option>
+                </select>
+                <small>Select the approximate time needed for the job.</small>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="additionalNotes">Additional Notes (optional):</label>
+                <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Describe the site conditions, specific tasks, or any other details..."></textarea>
+            </div>
+
+            <button type="submit">Submit Excavator Request</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__logo">TransQuick</div>
+            <p class="footer__text">
+                Reliable logistics at your fingertips. From transport to water
+                delivery, we're here for your everyday needs.
+            </p>
+            <div class="footer__links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Support</a>
+            </div>
+            <p class="footer__copyright">
+                &copy; 2025 TransQuick. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

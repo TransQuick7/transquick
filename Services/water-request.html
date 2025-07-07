@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TransQuick - Water Request</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../assets/images/transquick-logo.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="./css/services.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav__container section__container">
+            <div class="logo">TransQuick</div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line" id="menu-icon"></i>
+            </div>
+            <nav class="nav__menu" id="nav-menu">
+                <ul class="nav__links">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#how-it-works">How It Works</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+                <div class="nav__actions">
+                    <a href="client-login.html" class="btn">Customer Login</a>
+                    <a href="../Driver_side/driver-login.html" class="btn">Driver Login</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="request-page-container">
+        <h1>Request Water Delivery</h1>
+        <form class="request-form">
+            <div class="form-group">
+                <label for="deliveryLocation">Delivery Location:</label>
+                <input type="text" id="deliveryLocation" name="deliveryLocation" placeholder="Enter water delivery location" required />
+            </div>
+
+            <div class="form-group">
+                <label for="dateTime">Preferred Date & Time:</label>
+                <input type="datetime-local" id="dateTime" name="dateTime" required />
+            </div>
+
+            <div class="form-group">
+                <label for="waterVolume">Volume of Water Needed:</label>
+                <select id="waterVolume" name="waterVolume" required>
+                    <option value="">Select Volume</option>
+                    <option value="1000L">1,000 Liters (Small Tank)</option>
+                    <option value="2500L">2,500 Liters (Medium Tank)</option>
+                    <option value="5000L">5,000 Liters (Large Tank)</option>
+                    <option value="10000L">10,000 Liters (Very Large Tank)</option>
+                    <option value="custom">Custom (Specify in notes)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="waterType">Type of Water:</label>
+                <select id="waterType" name="waterType" required>
+                    <option value="">Select Water Type</option>
+                    <option value="Drinking">Drinking Water</option>
+                    <option value="Non-Potable">Non-Potable / General Use</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="additionalNotes">Additional Notes (optional):</label>
+                <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Any specific instructions, access details, or custom volume..."></textarea>
+            </div>
+
+            <button type="submit">Submit Water Request</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <div class="footer__logo">TransQuick</div>
+            <p class="footer__text">
+                Reliable logistics at your fingertips. From transport to water
+                delivery, we're here for your everyday needs.
+            </p>
+            <div class="footer__links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Support</a>
+            </div>
+            <p class="footer__copyright">
+                &copy; 2025 TransQuick. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

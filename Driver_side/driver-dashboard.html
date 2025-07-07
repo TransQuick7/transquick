@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver Dashboard | TransQuick</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="css/driver.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Mobile Header Toggle -->
+    <div class="mobile-header">
+      <button id="toggleSidebar"><i class="fas fa-bars"></i></button>
+    </div>
+
+    <div class="dashboard-wrapper">
+      <div class="dashboard">
+        <aside class="sidebar">
+          <div class="logo">TransQuick</div>
+          <nav class="menu">
+            <a href="#" class="active" data-section="home"><i class="fas fa-home"></i> Home</a>
+            <a href="#" data-section="available"><i class="fas fa-map-marker-alt"></i> Available Requests</a>
+            <a href="#" data-section="jobs"><i class="fas fa-briefcase"></i> My Jobs</a>
+            <a href="#" data-section="earnings"><i class="fas fa-money-bill-wave"></i> Earnings</a>
+            <a href="#" data-section="settings"><i class="fas fa-cog"></i> Settings</a>
+            <a href="#" data-section="profile"><i class="fas fa-user"></i> Profile</a>
+          </nav>
+          <a href="../index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </aside>
+
+        <main class="main-content">
+          <!-- Home -->
+          <section id="home" class="section active">
+            <h2>Welcome Driver</h2>
+            <div class="cards">
+              <div class="card">Today's Jobs: <strong>3</strong></div>
+              <div class="card">Earnings Today: <strong>Ksh 2,800</strong></div>
+              <div class="card">Pending Jobs: <strong>1</strong></div>
+            </div>
+          </section>
+
+          <!-- Available Requests -->
+          <section id="available" class="section">
+            <h2>Available Requests</h2>
+            <p>These are jobs nearby or matching your service.</p>
+            <ul>
+              <li>Transport from Karen to CBD — 8km — <button>Accept</button></li>
+              <li>Water delivery to Ruaka — <button>Accept</button></li>
+            </ul>
+          </section>
+
+          <!-- My Jobs -->
+          <section id="jobs" class="section">
+            <h2>My Jobs</h2>
+            <ul>
+              <li>Sand delivery to Syokimau — Completed</li>
+              <li>Exhauster at Ruiru — In Progress</li>
+            </ul>
+          </section>
+
+          <!-- Earnings -->
+          <section id="earnings" class="section">
+            <h2>Earnings</h2>
+            <p>Total this week: <strong>Ksh 12,500</strong></p>
+            <p>Total this month: <strong>Ksh 48,000</strong></p>
+          </section>
+
+          <!-- Settings -->
+          <section id="settings" class="section">
+            <h2>Settings</h2>
+            <p>Notification settings, account password, etc.</p>
+          </section>
+
+          <!-- Profile -->
+          <section id="profile" class="section">
+            <h2>My Profile</h2>
+            <p>Name: Peter Kamau<br>Email: pkamau@gmail.com<br>Phone: 0722 111222</p>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="js/driver.js"></script>
+  </body>
+</html>
